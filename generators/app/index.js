@@ -41,17 +41,18 @@ module.exports = yeoman.Base.extend({
   },
 
   writing: function () {
-    var copy = function(filePath) {
+    var copy = function(filePath, prefix) {
+      prefix = prefix || '';
       this.fs.copyTpl(
         this.templatePath(filePath),
-        this.destinationPath(filePath),
+        this.destinationPath(prefix + filePath),
         this.props
       );
     }.bind(this);
 
-    copy('.babelrc');
-    copy('.gitignore');
-    copy('.editorconfig');
+    copy('babelrc', '.');
+    copy('gitignore', '.');
+    copy('editorconfig', '.');
     copy('package.json');
     copy('gulpfile.babel.js');
     copy('src');
