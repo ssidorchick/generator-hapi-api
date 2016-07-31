@@ -1,6 +1,6 @@
 {
   "name": "generator-hapi-api",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Yeoman generator for hapi.js api application",
   "homepage": "https://github.com/ssidorchick/generator-hapi-api.git",
   "author": {
